@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-12 col-md-4">
+    <div class="card">
+      <img class="card-img" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{ pessoa.backdrop }}" alt="">
+    </div>
+  </div>
+  &nbsp;
+  <div class="col-12 col-md-7">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">{{ pessoa?.nome }}</h5>
+        <button [disabled]="loading" class="btn btn-primary btn-lg btn-block" (click) = "goEditPessoa(pessoa)">Editar</button>
+        <button [disabled]="loading" class="btn btn-primary btn-lg btn-block" (click) = "goDeletePessoa(pessoa)">Excluir</button>
+      </div>
+      <div class="card-body">
+        <p class="card-title text-justify"><strong>Altura:</strong> {{ pessoa?.altura }}</p>
+        <p class="card-title text-justify"><strong>País:</strong> {{ pessoa?.pais }}</p>
+        <br /> <br />
+      </div>
+    </div>
+  </div>
+</div>

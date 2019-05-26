@@ -1,0 +1,16 @@
+<div class="col-12">
+
+  <div class="form-group"> 
+        <label>Buscar séries:</label> 
+        <input type="text" (input)="findByTitle($event.target.value)" placeholder="Buscar" class="form-control" required="required">
+  </div>
+
+  <div class="card-columns">
+    <div class="card bg-dark text-white" (click)="goEdit(serie)" *ngFor="let serie of series">
+      <img class="card-img" src="https://image.tmdb.org/t/p/w250_and_h141_face{{ serie?.backdrop }}" alt="_blank" />
+      <div class="card-img-overlay">
+        <p class="card-title">{{ serie?.titulo }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <br/>
+  <div class="col-12 col-md-4 col-centered">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="title text-center">Editar</h5>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit(editarForm)" role = "form" [formGroup]="editarForm">
+          <div class="form-group">
+            <input type="text" formControlName="name" placeholder="Nome" class="form-control"/>
+            &nbsp;
+            <input type="text" placeholder="País" formControlName="place" class="form-control"/>
+            &nbsp;
+            
+          </div>
+          <div align="right">                             
+            <button [disabled]="loading" class="btn btn-primary btn-lg btn-block" (click) = "editar()">Editar</button>                              
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
